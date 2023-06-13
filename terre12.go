@@ -9,7 +9,7 @@ import (
 
 func main() {
 	if len(os.Args) == 2 {
-		if strings.ContainsAny(os.Args[1], ":h") {
+		if strings.Contains(os.Args[1], ":") {
 			t := strings.Split(os.Args[1], ":")
 			hstr := t[0]
 			h, _ := strconv.ParseInt(t[0], 10, 32)
